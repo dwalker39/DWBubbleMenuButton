@@ -14,6 +14,7 @@
 		5ED7DB0419E5FCEF0058CEC4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5ED7DB0319E5FCEF0058CEC4 /* Images.xcassets */; };
 		5ED7DB0719E5FCEF0058CEC4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5ED7DB0519E5FCEF0058CEC4 /* LaunchScreen.xib */; };
 		5ED7DB1319E5FCEF0058CEC4 /* DWBubbleMenuButtonExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED7DB1219E5FCEF0058CEC4 /* DWBubbleMenuButtonExampleTests.m */; };
+		5ED7DB1E19E5FD810058CEC4 /* DWBubbleMenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED7DB1D19E5FD810058CEC4 /* DWBubbleMenuButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		5ED7DB0C19E5FCEF0058CEC4 /* DWBubbleMenuButtonExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DWBubbleMenuButtonExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5ED7DB1119E5FCEF0058CEC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5ED7DB1219E5FCEF0058CEC4 /* DWBubbleMenuButtonExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DWBubbleMenuButtonExampleTests.m; sourceTree = "<group>"; };
+		5ED7DB1C19E5FD810058CEC4 /* DWBubbleMenuButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DWBubbleMenuButton.h; path = Source/DWBubbleMenuButton.h; sourceTree = SOURCE_ROOT; };
+		5ED7DB1D19E5FD810058CEC4 /* DWBubbleMenuButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DWBubbleMenuButton.m; path = Source/DWBubbleMenuButton.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +88,8 @@
 				5ED7DAFB19E5FCEF0058CEC4 /* AppDelegate.m */,
 				5ED7DAFD19E5FCEF0058CEC4 /* ViewController.h */,
 				5ED7DAFE19E5FCEF0058CEC4 /* ViewController.m */,
+				5ED7DB1C19E5FD810058CEC4 /* DWBubbleMenuButton.h */,
+				5ED7DB1D19E5FD810058CEC4 /* DWBubbleMenuButton.m */,
 				5ED7DB0019E5FCEF0058CEC4 /* Main.storyboard */,
 				5ED7DB0319E5FCEF0058CEC4 /* Images.xcassets */,
 				5ED7DB0519E5FCEF0058CEC4 /* LaunchScreen.xib */,
@@ -222,6 +227,7 @@
 				5ED7DAFF19E5FCEF0058CEC4 /* ViewController.m in Sources */,
 				5ED7DAFC19E5FCEF0058CEC4 /* AppDelegate.m in Sources */,
 				5ED7DAF919E5FCEF0058CEC4 /* main.m in Sources */,
+				5ED7DB1E19E5FD810058CEC4 /* DWBubbleMenuButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
