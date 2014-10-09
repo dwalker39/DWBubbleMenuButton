@@ -47,10 +47,8 @@
 }
 
 - (void)showButtons {
-    if (self.delegate != nil) {
-        if ([self.delegate respondsToSelector:@selector(willExpand:)]) {
-            [self.delegate willExpand:self];
-        }
+    if ([self.delegate respondsToSelector:@selector(bubbleMenuButtonWillExpand:)]) {
+        [self.delegate bubbleMenuButtonWillExpand:self];
     }
     
     [self _prepareForButtonExpansion];
@@ -65,8 +63,8 @@
         }
         
         if (self.delegate != nil) {
-            if ([self.delegate respondsToSelector:@selector(didExpand:)]) {
-                [self.delegate didExpand:self];
+            if ([self.delegate respondsToSelector:@selector(bubbleMenuButtonDidExpand:)]) {
+                [self.delegate bubbleMenuButtonDidExpand:self];
             }
         }
         
@@ -158,10 +156,8 @@
 }
 
 - (void)dismissButtons {
-    if (self.delegate != nil) {
-        if ([self.delegate respondsToSelector:@selector(willCollapse:)]) {
-            [self.delegate willCollapse:self];
-        }
+    if ([self.delegate respondsToSelector:@selector(bubbleMenuButtonWillCollapse:)]) {
+        [self.delegate bubbleMenuButtonWillCollapse:self];
     }
     
     self.userInteractionEnabled = NO;
@@ -177,8 +173,8 @@
         }
         
         if (self.delegate != nil) {
-            if ([self.delegate respondsToSelector:@selector(didCollapse:)]) {
-                [self.delegate didCollapse:self];
+            if ([self.delegate respondsToSelector:@selector(bubbleMenuButtonDidCollapse:)]) {
+                [self.delegate bubbleMenuButtonDidCollapse:self];
             }
         }
         
@@ -468,15 +464,6 @@
 
 #pragma mark -
 #pragma mark Lifecycle
-
-- (id)initWithFrame:(CGRect)frame {
-    self = [super initWithFrame:frame];
-    
-    if (self) {
-        [self _defaultInit];
-    }
-    return self;
-}
 
 - (id)initWithFrame:(CGRect)frame expansionDirection:(ExpansionDirection)direction {
     self = [super initWithFrame:frame];

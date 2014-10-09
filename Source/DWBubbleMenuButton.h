@@ -21,10 +21,10 @@ typedef NS_ENUM(NSUInteger, ExpansionDirection) {
 @protocol DWBubbleMenuViewDelegate <NSObject>
 
 @optional
-- (void)willExpand:(DWBubbleMenuButton *)expandableView;
-- (void)didExpand:(DWBubbleMenuButton *)expandableView;
-- (void)willCollapse:(DWBubbleMenuButton *)expandableView;
-- (void)didCollapse:(DWBubbleMenuButton *)expandableView;
+- (void)bubbleMenuButtonWillExpand:(DWBubbleMenuButton *)expandableView;
+- (void)bubbleMenuButtonDidExpand:(DWBubbleMenuButton *)expandableView;
+- (void)bubbleMenuButtonWillCollapse:(DWBubbleMenuButton *)expandableView;
+- (void)bubbleMenuButtonDidCollapse:(DWBubbleMenuButton *)expandableView;
 
 @end
 
