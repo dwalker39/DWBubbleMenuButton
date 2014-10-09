@@ -1,6 +1,7 @@
 DWBubbleMenuButton
 ==================
 
-DWBubbleMenuButton is an expanding animation for showing a simple menu. Project allows for expanding menus in left, right, up, and down directions.
+![](demo.gif)
 
-![alt tag](https://raw.github.com/dwalker39/DWBubbleMenuButton/master/demo.gif)
+DWBubbleMenuButton is a simple animation framework for expanding and collapsing a variable sized menu. Project allows for expanding menus in left, right, up, and down directions. Using the framework is as simple as setting your home button and adding an array of menu buttons.
+
