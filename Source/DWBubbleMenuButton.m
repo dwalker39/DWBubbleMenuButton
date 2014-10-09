@@ -495,9 +495,6 @@
 #pragma mark -
 #pragma mark Lifecycle
 
-// TODO: make sure this will work with storyboards
-// TODO: make sure collapseAfterSelection works
-
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     
