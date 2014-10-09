@@ -9,12 +9,12 @@ Project allows for expanding menus in left, right, up, and down directions. Usin
 CocoaPods
 ==================
 ```
-pod "DWBubbleMenuButton", "~> 1.0"
+pod 'DWBubbleMenuButton', '~> 1.0'
 ```
 
 Usage
 ==================
-Create a home a button
+Create a home button
 ```objective-c
     UIButton *menuButton = [UIButton buttonWithType:UIButtonTypeSystem];
 
@@ -24,10 +24,10 @@ Create a home a button
 Create an instance of DWBubbleMenuButton
 ```objective-c
     DWBubbleMenuButton *bubbleMenuButton = [[DWBubbleMenuButton alloc] initWithFrame:CGRectMake(20.f,
-                                                                                            20.f,
-                                                                                            100.f,
-                                                                                            100.f)
-                                                              expansionDirection:DirectionDown];
+                                                                                                20.f,
+                                                                                                100.f,
+                                                                                                100.f)
+                                                                  expansionDirection:DirectionDown];
     bubbleMenuButton.homeButtonView = menuButton;
 ```
 
