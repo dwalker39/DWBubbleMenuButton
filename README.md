@@ -14,7 +14,7 @@ pod 'DWBubbleMenuButton', '~> 1.0'
 
 Usage
 ==================
-Create a home a button
+Create a home button
 ```objective-c
     UIButton *menuButton = [UIButton buttonWithType:UIButtonTypeSystem];
 
