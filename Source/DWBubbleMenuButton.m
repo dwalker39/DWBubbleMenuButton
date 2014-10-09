@@ -12,6 +12,7 @@
 
 @interface DWBubbleMenuButton ()
 
+@property (nonatomic, strong) UITapGestureRecognizer *tapGestureRecognizer;
 @property (nonatomic, strong) NSMutableArray *buttonContainer;
 @property (nonatomic, assign) CGRect originFrame;
 
@@ -259,14 +260,29 @@
     
     self.direction = DirectionUp;
     self.animatedHighlighting = YES;
-    self.collapseAfterSelection = NO;
+    self.collapseAfterSelection = YES;
     self.animationDuration = kDefaultAnimationDuration;
     self.standbyAlpha = 1.f;
     self.highlightAlpha = 0.45f;
     self.originFrame = self.frame;
     self.buttonSpacing = 20.f;
-    
     _isCollapsed = YES;
+    
+    self.tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(_handleTapGesture:)];
+    self.tapGestureRecognizer.cancelsTouchesInView = NO;
+    self.tapGestureRecognizer.delegate = self;
+    
+    [self addGestureRecognizer:self.tapGestureRecognizer];
+}
+
+- (void)_handleTapGesture:(id)sender {
+    if (self.tapGestureRecognizer.state == UIGestureRecognizerStateEnded) {
+        CGPoint touchLocation = [self.tapGestureRecognizer locationOfTouch:0 inView:self];
+        
+        if (_collapseAfterSelection && _isCollapsed == NO && CGRectContainsPoint(self.homeButtonView.frame, touchLocation) == false) {
+            [self dismissButtons];
+        }
+    }
 }
 
 - (void)_animateWithBlock:(void (^)(void))animationBlock {
@@ -463,7 +479,33 @@
 }
 
 #pragma mark -
+#pragma mark UIGestureRecognizer Delegate
+
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer
+       shouldReceiveTouch:(UITouch *)touch {
+    CGPoint touchLocation = [touch locationInView:self];
+
+    if ([self _subviewForPoint:touchLocation] != self && _collapseAfterSelection) {
+        return YES;
+    }
+    
+    return NO;
+}
+
+#pragma mark -
 #pragma mark Lifecycle
+
+// TODO: make sure this will work with storyboards
+// TODO: make sure collapseAfterSelection works
+
+- (id)initWithFrame:(CGRect)frame {
+    self = [super initWithFrame:frame];
+    
+    if (self) {
+        [self _defaultInit];
+    }
+    return self;
+}
 
 - (id)initWithFrame:(CGRect)frame expansionDirection:(ExpansionDirection)direction {
     self = [super initWithFrame:frame];

@@ -19,16 +19,16 @@
     // Create down menu button
     UILabel *homeLabel = [self createHomeButtonView];
     
-    DWBubbleMenuButton *downMenuView = [[DWBubbleMenuButton alloc] initWithFrame:CGRectMake(20.f,
+    DWBubbleMenuButton *downMenuButton = [[DWBubbleMenuButton alloc] initWithFrame:CGRectMake(20.f,
                                                                                         20.f,
                                                                                         homeLabel.frame.size.width,
                                                                                         homeLabel.frame.size.height)
                                                           expansionDirection:DirectionDown];
-    downMenuView.homeButtonView = homeLabel;
+    downMenuButton.homeButtonView = homeLabel;
     
-    [downMenuView addButtons:[self createDemoButtonArray]];
+    [downMenuButton addButtons:[self createDemoButtonArray]];
     
-    [self.view addSubview:downMenuView];
+    [self.view addSubview:downMenuButton];
     
     // Create up menu button
     homeLabel = [self createHomeButtonView];
