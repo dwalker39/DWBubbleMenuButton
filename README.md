@@ -28,7 +28,7 @@ Add buttons to your bubble menu
 ```objective-c
     [bubbleMenuButton addButtons:@[ /* your buttons */]];
     
-    /* Or */
+    /* OR */
     
     [bubbleMenuButton addButton:/* your button */];
 ```
