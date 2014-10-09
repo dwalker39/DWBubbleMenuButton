@@ -8,14 +8,14 @@ DWBubbleMenuButton is a simple animation framework for expanding and collapsing 
 Usage
 ==================
 Create a home a button
-```
+```objective-c
     UIButton *menuButton = [UIButton buttonWithType:UIButtonTypeSystem];
 
     [menuButton setTitle:@"Menu" forState:UIControlStateNormal];
 ```
 
 Create an instance of DWBubbleMenuButton
-```
+```objective-c
     DWBubbleMenuButton *bubbleMenuButton = [[DWBubbleMenuButton alloc] initWithFrame:CGRectMake(20.f,
                                                                                             20.f,
                                                                                             100.f,
@@ -25,7 +25,7 @@ Create an instance of DWBubbleMenuButton
 ```
 
 Add buttons to your bubble menu
-```
+```objective-c
     [bubbleMenuButton addButtons:@[ /* your buttons */]];
     
     /* Or */
