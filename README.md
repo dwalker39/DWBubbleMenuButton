@@ -9,7 +9,7 @@ Project allows for expanding menus in left, right, up, and down directions. Usin
 CocoaPods
 ==================
 ```
-pod "DWBubbleMenuButton", "~> 1.0"
+pod 'DWBubbleMenuButton', '~> 1.0'
 ```
 
 Usage
