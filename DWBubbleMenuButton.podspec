@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "DWBubbleMenuButton"
-  s.version      = "1.0.0"
+  s.version      = “1.0.1”
   s.summary      = "Simple animation class for expanding and collapsing a variable sized menu"
 
   s.description  = <<-DESC
