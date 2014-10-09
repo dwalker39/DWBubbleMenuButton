@@ -24,10 +24,10 @@ Create a home button
 Create an instance of DWBubbleMenuButton
 ```objective-c
     DWBubbleMenuButton *bubbleMenuButton = [[DWBubbleMenuButton alloc] initWithFrame:CGRectMake(20.f,
-                                                                                            20.f,
-                                                                                            100.f,
-                                                                                            100.f)
-                                                              expansionDirection:DirectionDown];
+                                                                                                20.f,
+                                                                                                100.f,
+                                                                                                100.f)
+                                                                  expansionDirection:DirectionDown];
     bubbleMenuButton.homeButtonView = menuButton;
 ```
 
