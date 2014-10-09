@@ -10,4 +10,6 @@ build/
 *.mode2v3
 xcuserdata
 .xcodeproj/ !*.xcodeproj/project.pbxproj
-*.xcodeproj/project.xcworkspace/xcuserdata/covernova1.xcuserdatad/UserInterfaceState.xcuserstate
+*.xcodeproj/project.xcworkspace/xcuserdata/covernova1.xcuserdatad/
+*.xcodeproj/project.xcworkspace/xcshareddata/
+UserInterfaceState.xcuserstate
