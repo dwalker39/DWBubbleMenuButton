@@ -32,3 +32,5 @@ Add buttons to your bubble menu
     
     [bubbleMenuButton addButton:/* your button */];
 ```
+
+DWBubbleMenuButton will automatically handle the animation, frame changes, and showing your menu buttons in the proper order
