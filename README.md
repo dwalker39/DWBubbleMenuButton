@@ -33,7 +33,7 @@ Create an instance of DWBubbleMenuButton
 
 Add buttons to your bubble menu
 ```objective-c
-    [bubbleMenuButton addButtons:@[ /* your buttons */]];
+    [bubbleMenuButton addButtons:@[/* your buttons */]];
     
     /* OR */
     
