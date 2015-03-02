@@ -38,19 +38,19 @@ typedef NS_ENUM(NSUInteger, ExpansionDirection) {
 // The direction in which the menu expands
 @property (nonatomic) enum ExpansionDirection direction;
 
-// Indicates whether the home button will animate it's touch highlighting, this is enabled by default
+// Whether the home button will animate it's touch highlighting, this is enabled by default
 @property (nonatomic) BOOL animatedHighlighting;
 
-// Indicates whether menu should collapse after a button selection, this is enabled by default
+// Whether the menu will collapse after a button selection, this is enabled by default
 @property (nonatomic) BOOL collapseAfterSelection;
 
 // The duration of the expand/collapse animation
 @property (nonatomic) float animationDuration;
 
-// The default alpha of the homeButtonView when not tapped
+// The default alpha of the homeButtonView when not highlighted
 @property (nonatomic) float standbyAlpha;
 
-// The highlighted alpha of the homeButtonView when tapped
+// The highlighted alpha of the homeButtonView when highlighted
 @property (nonatomic) float highlightAlpha;
 
 // The spacing between menu buttons when expanded
